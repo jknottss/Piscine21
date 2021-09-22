@@ -6,7 +6,7 @@
 /*   By: jknotts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 16:35:16 by jknotts           #+#    #+#             */
-/*   Updated: 2021/09/22 16:16:36 by inightin         ###   ########.fr       */
+/*   Updated: 2021/09/22 18:19:48 by inightin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ char	*ft_get_first(char *map, int len)
 	first[len] = '\0';
 	if (close(fd) == -1)
 		return (NULL);
+	if (first[0] == '\n' || first[0] == '\0')
+	{
+		free(first);
+		return (NULL);
+	}
 	return (first);
 }
 
@@ -69,7 +74,7 @@ char	*ft_read_fline_stdin(char *str)
 	i = 0;
 	while (str[i] != '\n' && str[i] != '\0')
 		i++;
-	if (str[i] == '\0')
+	if (str[i] == '\0' || (str[i] == '\n' && i == 0))
 		return (NULL);
 	fline = malloc(sizeof(char) * i + 2);
 	if (fline == NULL)

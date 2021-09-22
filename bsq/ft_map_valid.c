@@ -6,7 +6,7 @@
 /*   By: inightin <inightin@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 21:06:00 by inightin          #+#    #+#             */
-/*   Updated: 2021/09/22 05:06:08 by inightin         ###   ########.fr       */
+/*   Updated: 2021/09/22 17:55:36 by inightin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ int	ft_all_valid(char *fline, char *file, int len)
 	symb = ft_symb_valid(fline);
 	if (symb == NULL)
 	{
+		free(symb);
 		return (0);
 	}
 	if (!ft_len_valid(file, len, num, symb))
