@@ -6,7 +6,7 @@
 /*   By: jknotts <jknotts@student.21-school>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 10:34:50 by jknotts           #+#    #+#             */
-/*   Updated: 2021/09/22 15:08:17 by jknotts          ###   ########.fr       */
+/*   Updated: 2021/09/22 17:36:28 by inightin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	ft_start_files(int argc, char **argv)
 	{
 		if (!ft_run(argv[i]))
 		{
-			ft_putstr("map error\n");
+			ft_putstr_error("map error\n");
 			if (i != argc - 1)
 				ft_putchar('\n');
 			i++;

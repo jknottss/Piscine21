@@ -6,7 +6,7 @@
 /*   By: inightin <inightin@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 13:49:30 by inightin          #+#    #+#             */
-/*   Updated: 2021/09/22 04:16:12 by inightin         ###   ########.fr       */
+/*   Updated: 2021/09/22 17:33:48 by inightin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ int			ft_map_valid(char *fline);
 char		*ft_read_fline_stdin(char *str);
 void		ft_destroy(void **array, int size);
 void		set_free(void *ptr1, void *ptr2);
+void		ft_putstr_error(char *str);
 #endif

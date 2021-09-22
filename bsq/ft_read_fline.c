@@ -6,7 +6,7 @@
 /*   By: jknotts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 16:35:16 by jknotts           #+#    #+#             */
-/*   Updated: 2021/09/22 02:13:45 by inightin         ###   ########.fr       */
+/*   Updated: 2021/09/22 16:16:36 by inightin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,10 @@ char	*ft_read_fline_stdin(char *str)
 	char	*fline;
 
 	i = 0;
-	while (str[i] != '\n')
+	while (str[i] != '\n' && str[i] != '\0')
 		i++;
+	if (str[i] == '\0')
+		return (NULL);
 	fline = malloc(sizeof(char) * i + 2);
 	if (fline == NULL)
 	{

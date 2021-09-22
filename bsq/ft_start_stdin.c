@@ -6,7 +6,7 @@
 /*   By: inightin <inightin@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 23:42:24 by inightin          #+#    #+#             */
-/*   Updated: 2021/09/22 06:21:13 by inightin         ###   ########.fr       */
+/*   Updated: 2021/09/22 17:35:51 by inightin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,6 @@ void	ft_start_stdin(void)
 
 	str = ft_stdin();
 	if (!ft_run_stdin(str))
-		ft_putstr("map error\n");
+		ft_putstr_error("map error\n");
 	free(str);
 }

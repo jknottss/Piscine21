@@ -6,7 +6,7 @@
 #    By: inightin <inigtin@student.21-school.ru>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/12 16:00:12 by inightin          #+#    #+#              #
-#    Updated: 2021/09/22 02:46:32 by inightin         ###   ########.fr        #
+#    Updated: 2021/09/22 16:02:50 by inightin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS = ft_putchar.c ft_putstr.c ft_std_atoi.c ft_strlen.c ft_map_valid.c \
 
 CCFLAGS = -Wall -Wextra -Werror 
 
-%.o: 	%.c
+%.o: 	%.c ft.h
 		gcc -c ${CCFLAGS} $< -o $@
 
 OBJS = ${SRCS:.c=.o}
